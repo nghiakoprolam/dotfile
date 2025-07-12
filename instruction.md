@@ -26,14 +26,14 @@
 or use nmtui
 ------------------------------------------------------------------------------------------------------------------------------------------
 ✅ Cách an toàn để dọn dẹp /usr/lib
-🔍 1. Tìm thư viện không còn được dùng (orphans)
-
-sudo pacman -Qdt
+ 1. Tìm thư viện không còn được dùng (orphans)
+  
+  sudo pacman -Qdt
 
 → Liệt kê các gói cài làm phụ thuộc, nhưng hiện không còn cần nữa.
-🧹 2. Xóa các gói orphan
-
-sudo pacman -Rns $(pacman -Qdtq)
+ 2. Xóa các gói orphan
+  
+  sudo pacman -Rns $(pacman -Qdtq)
 
 Điều này sẽ:
 
