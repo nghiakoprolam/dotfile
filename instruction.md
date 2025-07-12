@@ -6,7 +6,7 @@
     mkdir /mnt/boot
     mount /dev/nvme0n1p1 /mnt/boot
     archinstall..
-
+------------------------------------------------------------------------------------------------------------------------------------------
                 GUI 
 | Chỉnh theme GTK                    | `lxappearance`                      |
 | Chỉnh theme Qt (ứng dụng KDE/Qt)         `qt5ct`                             |
@@ -15,7 +15,7 @@
 | Cấu hình kết nối mạng                    `nm-connection-editor`, `nmtui`              |
 | Chỉnh GNOME (theme, font, extension)      `gnome-tweaks`                      |
 | Chỉnh cấu hình nâng cao GTK/GNOME        `dconf-editor`                      |
-
+------------------------------------------------------------------------------------------------------------------------------------------
                 Network
 
     iwctl
@@ -24,4 +24,19 @@
     station wlan0 connect wifi-name
 
 or use nmtui
+------------------------------------------------------------------------------------------------------------------------------------------
+✅ Cách an toàn để dọn dẹp /usr/lib
+🔍 1. Tìm thư viện không còn được dùng (orphans)
 
+sudo pacman -Qdt
+
+→ Liệt kê các gói cài làm phụ thuộc, nhưng hiện không còn cần nữa.
+🧹 2. Xóa các gói orphan
+
+sudo pacman -Rns $(pacman -Qdtq)
+
+Điều này sẽ:
+
+    Gỡ các gói không cần nữa
+
+    Gỡ luôn file trong /usr/lib của gói đó
