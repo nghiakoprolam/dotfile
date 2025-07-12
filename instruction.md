@@ -25,6 +25,13 @@
 
 or use nmtui
 ------------------------------------------------------------------------------------------------------------------------------------------
+-Del file -> sudo ncdu / (with intuitive gui)
+-Unistall -> 
+  +del orphan: sudo pacman -Rns $(pacman -Qdtq)
+  +del old cache: sudo paccache -r
+  +Unistall installed software: ex: pacman -Q | grep -Ei 'i3|bspwm|xmonad|qtile|awesome|dwm|hyprland|sway'
+                                ex: sudo pacman -Rns i3-wm bspwm awesome (-R: remove  -n: remove config files installed by package  -s: remove unused dependencies installed with the package)
+------------------------------------------------------------------------------------------------------------------------------------------
 ✅ Cách an toàn để dọn dẹp /usr/lib
  1. Tìm thư viện không còn được dùng (orphans)
   
