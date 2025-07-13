@@ -10,7 +10,26 @@
     archinstall..
 
     install essential
-    sudo pacman -S neovim qutebrowser ncdu arandr pavucontrol NetworkManager dolphin bluez bluez-utils nvidia-smi nvidia-smi
+    sudo pacman -S kitty neovim qutebrowser ncdu arandr pavucontrol p7zip NetworkManager dolphin bluez bluez-utils nvidia-smi nvidia-smi
+
+kitty
+neovim
+qutebrowser
+ncdu
+arandr
+pavucontrol
+p7zip
+NetworkManager
+dolphin
+bluez
+bluez-utils
+nvidia-smi
+nvidia-smi
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+self run with terminal 
+alias steambg='steam >/dev/null 2>&1 disown'
 ------------------------------------------------------------------------------------------------------------------------------------------
                 GUI setting
  screen resolution customize: `arandr`                          
