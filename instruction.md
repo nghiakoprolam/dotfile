@@ -8,6 +8,9 @@
     mkdir /mnt/boot
     mount /dev/nvme0n1p1 /mnt/boot
     archinstall..
+
+    install essential
+    sudo pacman -S neovim qutebrowser ncdu arandr pavucontrol NetworkManager dolphin bluez bluez-utils nvidia-smi nvidia-smi
 ------------------------------------------------------------------------------------------------------------------------------------------
                 GUI setting
  screen resolution customize: `arandr`                          
