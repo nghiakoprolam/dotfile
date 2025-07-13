@@ -1,5 +1,7 @@
                 Archlinux installation
-    connect network use iwctl
+
+    
+    connect network use iwctl or nmtui
     mkfs.fat -F32 /dev/nvme0n1p1
     mkfs.ext4 /dev/nvme0n1p2
     mount /dev/nvme0n1p2 /mnt
@@ -7,14 +9,13 @@
     mount /dev/nvme0n1p1 /mnt/boot
     archinstall..
 ------------------------------------------------------------------------------------------------------------------------------------------
-                GUI 
-| Chỉnh theme GTK                    | `lxappearance`                      |
-| Chỉnh theme Qt (ứng dụng KDE/Qt)         `qt5ct`                             |
-| Cấu hình màn hình (độ phân giải, vị trí) `arandr`                            |
-| Chỉnh âm lượng PulseAudio                 `pavucontrol`                       |
-| Cấu hình kết nối mạng                    `nm-connection-editor`, `nmtui`              |
-| Chỉnh GNOME (theme, font, extension)      `gnome-tweaks`                      |
-| Chỉnh cấu hình nâng cao GTK/GNOME        `dconf-editor`                      |
+                GUI setting
+ screen resolution customize: `arandr`                          
+ custom audio PulseAudio                 `pavucontrol`                  
+ network:                    `nm-connection-editor`, `nmtui`                                    
+ filemanager: nautilus / dophin
+ Del file terminal file manager-> sudo ncdu / (with intuitive gui)
+ 
 ------------------------------------------------------------------------------------------------------------------------------------------
                 Network
 
@@ -23,17 +24,11 @@
     station wlan0 get-network
     station wlan0 connect wifi-name
 
-or use nmtui
+or use nmtui (install networkmanager,enable & start NetworkManager)
 ------------------------------------------------------------------------------------------------------------------------------------------
--Del file -> sudo ncdu / (with intuitive gui)
--Unistall -> 
-  +del orphan: sudo pacman -Rns $(pacman -Qdtq)
-  +del old cache: sudo paccache -r
-  +Unistall installed software: ex: pacman -Q | grep -Ei 'i3|bspwm|xmonad|qtile|awesome|dwm|hyprland|sway'
-                                ex: sudo pacman -Rns i3-wm bspwm awesome (-R: remove  -n: remove config files installed by package  -s: remove unused dependencies installed with the package)
 ------------------------------------------------------------------------------------------------------------------------------------------
-✅ Cách an toàn để dọn dẹp /usr/lib
- 1. Tìm thư viện không còn được dùng (orphans)
+CLeanup (optional)
+1. Tìm thư viện không còn được dùng (orphans)
   
   sudo pacman -Qdt
 
@@ -47,3 +42,9 @@ or use nmtui
     Gỡ các gói không cần nữa
 
     Gỡ luôn file trong /usr/lib của gói đó
+
+-Unistall -> 
+  +del orphan: sudo pacman -Rns $(pacman -Qdtq)
+  +del old cache: sudo paccache -r
+  +Unistall installed software: ex: pacman -Q | grep -Ei 'i3|bspwm|xmonad|qtile|awesome|dwm|hyprland|sway'
+                                ex: sudo pacman -Rns i3-wm bspwm awesome (-R: remove  -n: remove config files installed by package  -s: remove unused dependencies installed with the package)
