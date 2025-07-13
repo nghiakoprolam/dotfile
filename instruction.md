@@ -13,9 +13,9 @@
  screen resolution customize: `arandr`                          
  custom audio PulseAudio                 `pavucontrol`                  
  network:                    `nm-connection-editor`, `nmtui`                                    
- filemanager: nautilus / dophin
+ filemanager:  dophin
  Del file terminal file manager-> sudo ncdu / (with intuitive gui)
- 
+ zip: p7zip
 ------------------------------------------------------------------------------------------------------------------------------------------
                 Network
 
